@@ -1,1 +1,17 @@
 \chapter{Theoretischer Hintergrund}
+
+In diesem Kapitel werden die theoretischen Grundlagen und Konzepte vorgestellt, die für das Verständnis der in dieser Arbeit behandelten Themen relevant sind. Es werden zentrale Begriffe definiert und wichtige Theorien erläutert, die als Basis für die weitere Analyse dienen.
+\section{Grundlagen in PKI}
+Eine Public Key Infrastructure (PKI) ist ein System zur Verwaltung digitaler Zertifikate und öffentlicher Schlüssel, das die sichere Kommunikation und Authentifizierung in Netzwerken ermöglicht. PKI basiert auf dem Konzept der asymmetrischen Kryptographie, bei der ein Paar von Schlüsseln verwendet wird: ein öffentlicher Schlüssel zum Verschlüsseln von Daten und ein privater Schlüssel zum Entschlüsseln.
+\subsection{Zertifikate}
+Digitale Zertifikate sind elektronische Dokumente, die die Identität eines Benutzers, einer Organisation oder eines Geräts bestätigen. Sie enthalten den öffentlichen Schlüssel des Inhabers sowie Informationen über den Aussteller des Zertifikats, die Gültigkeitsdauer und andere relevante Daten. Zertifikate werden von einer vertrauenswürdigen Zertifizierungsstelle (CA) ausgestellt, die die Identität des Antragstellers überprüft.
+\subsection{Zertifizierungsstellen (CA)}
+Zertifizierungsstellen sind vertrauenswürdige Organisationen, die digitale Zertifikate ausstellen und verwalten. Sie spielen eine zentrale Rolle in der PKI, da sie die Authentizität der Zertifikate gewährleisten. Es gibt verschiedene Arten von CAs, darunter Root-CAs, die das höchste Vertrauensniveau bieten, und Intermediate-CAs, die von Root-CAs autorisiert sind, Zertifikate auszustellen.
+\subsection{Zertifikatsketten}
+Eine Zertifikatskette ist eine Hierarchie von Zertifikaten, die von einer Root-CA bis zu einem Endbenutzerzertifikat reicht. Jede Stufe in der Kette wird durch ein Zertifikat repräsentiert, das von der darüber liegenden CA signiert wurde. Die Zertifikatskette ermöglicht es, die Vertrauenswürdigkeit eines Endbenutzerzertifikats zu überprüfen, indem die Signaturen entlang der Kette validiert werden.
+\subsection{Widerrufsmechanismen}
+Widerrufsmechanismen sind Verfahren, mit denen Zertifikate ungültig gemacht werden können, bevor ihr ursprünglich festgelegtes Ablaufdatum erreicht ist. Dies ist wichtig, um die Sicherheit zu gewährleisten, falls ein Zertifikat kompromittiert wurde oder nicht mehr vertrauenswürdig ist. Zu den gängigen Widerrufsmechanismen gehören Zertifikatsperrlisten (CRLs) und das Online Certificate Status Protocol (OCSP).
+\subsection{XCA}
+XCA (X Certificate and Key management) ist ein Open-Source-Tool zur Verwaltung von Zertifikaten und Schlüsseln in einer PKI-Umgebung. Es bietet eine benutzerfreundliche Oberfläche zur Erstellung, Verwaltung und Speicherung von Zertifikaten, Schlüsseln und Zertifizierungsstellen. XCA unterstützt verschiedene Zertifikatsformate und ermöglicht die einfache Verwaltung von Zertifikatsketten und Widerrufslisten.
+\section{Zusammenfassung}
+In diesem Kapitel wurden die grundlegenden Konzepte und Komponenten einer Public Key Infrastructure (PKI) erläutert, einschließlich digitaler Zertifikate, Zertifizierungsstellen, Zertifikatsketten und Widerrufsmechanismen. Zudem wurde das Tool XCA vorgestellt, das zur Verwaltung von Zertifikaten und Schlüsseln in einer PKI-Umgebung verwendet wird. Diese theoretischen Grundlagen bilden die Basis für die weitere Analyse und Anwendung in den folgenden Kapiteln dieser Arbeit.
